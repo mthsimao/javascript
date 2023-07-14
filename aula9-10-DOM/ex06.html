@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #area {
+            background-color: green;
+            color: white;
+            font: normal 18pt Arial;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">Interaja...</div>
+
+    <script>
+        var txt = document.querySelector('#area')
+
+        txt.addEventListener('click', clicar) // addEventListener = presta atenção em determinado evento
+        txt.addEventListener('mouseenter', entrou)
+        txt.addEventListener('mouseout', saiu)
+
+        function clicar() {
+            txt.innerText = 'Clicou!'
+            txt.style.background = 'red'
+        }
+
+        function entrou() {
+            txt.innerText = 'Entrou'
+        }
+
+        function saiu() {
+            txt.innerText = 'Saiu'
+            txt.style.background = 'green'
+        }
+    </script>
+</body>
+</html>
