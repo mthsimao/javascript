@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interação JS</title>
+    <style>
+        body {
+            font: normal 16pt Arial;
+        }
+
+        button {
+            font-size: 18px;
+            width: 160px;
+            height: 60px;
+        }
+
+        div {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Manipulando números.</h1>
+
+    <button id="btn">Clique aqui!</button>
+
+    <div id="res">O resultado aqui...</div>
+
+    <script>
+        window.alert('Welcome to my website!')
+
+        var btn = document.querySelector('#btn')
+        var res = document.querySelector('#res')
+
+        btn.addEventListener('click', clicar)
+
+        function clicar() {
+            var numero = window.prompt('Escreva um número: ')
+
+            var num1 = Number(numero.value)
+
+            var vezes2 = numero*2
+            var divisao = numero/2
+
+            res.innerHTML = `O dobro de ${numero} é ${vezes2} e a metade é ${divisao}!`
+        }
+        
+
+    </script>
+</body>
+</html>

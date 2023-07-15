@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaction JS</title>
+    <style>
+        body {
+            font: normal 16pt Arial;
+        }
+
+        button {
+            font-size: 18px;
+            width: 160px;
+            height: 60px;
+        }
+
+        div {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Working with data! v2</h1>
+
+    <button id="btn">Click here.</button>
+
+    <div id="res">There you go...</div>
+
+    <script>
+        var btn = document.querySelector('#btn')
+        var res = document.querySelector('#res')
+
+        btn.addEventListener('click', clicar)
+
+        function clicar() {
+            var name = window.prompt('What is your name?')
+
+            res.innerHTML = `Hello, <strong>${name}!</strong> Nice to meet you!`
+            
+        }
+    </script>
+</body>
+</html>

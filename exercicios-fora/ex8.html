@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interação JS</title>
+    <style>
+        body {
+            font: normal 16pt Arial;
+        }
+
+        button {
+            font-size: 18px;
+            width: 160px;
+            height: 60px;
+        }
+
+        div {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste!</h1>
+
+    <button id="btn">Clique aqui.</button>
+
+    <div id="res">O resultado vai aparecer aqui...</div>
+
+    <script>
+        var btn = document.querySelector('#btn')
+        var res = document.querySelector('#res')
+
+        btn.addEventListener('click', clicar)
+        
+        function clicar() {
+            var numero = Number(window.prompt('Digite um número: '))
+
+            res.innerHTML = ` O número a ser analisado aqui será o <strong>${numero}</strong> <br> <hr>`
+
+            res.innerHTML += `<p>O seu valor absoluto é ${Math.abs(numero)}</p>` // math.abs = retorna o valor absoluto de um número
+
+            res.innerHTML += `<p>Sua parte inteira é ${Math.trunc(numero)}</p>` /* math.trunc = retorna o valor inteiro de um número, descartando suas decimais */
+
+            res.innerHTML +=  `<p>O valor inteiro mais próximo é ${Math.round(numero)}</p>` /* math.round =  retorna o valor de um número arredondado para o inteiro mais proximo. */
+
+            res.innerHTML += `<p>A sua raiz quadrada é ${Math.sqrt(numero)} </p>` // math.sqrt = retorna a raiz quadrada de um número
+
+            res.innerHTML += `<p>A sua raiz cúbia é ${Math.cbrt(numero)} </p>` // math.cbrt = retorna a raiz cúbica de um número
+
+            res.innerHTML += `<p>O valor de ${numero}<sup>2</sup> é ${Math.pow(numero, 2)} </p>`
+            /* 
+            Retorna a base elevada ao expoente power, ou seja, baseexpoente.
+            Math.pow(base, expoente) =
+            Math.pow(8, 2) =
+            Retornará = 8^2 > 64
+            */
+
+            res.innerHTML += `<p>O valor de ${numero}<sup>3</sup> é ${Math.pow(numero, 3)} </p>`
+            
+        }
+
+    </script>
+</body>
+</html>
