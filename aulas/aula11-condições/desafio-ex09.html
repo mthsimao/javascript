@@ -27,15 +27,15 @@
 <body>
     <h1>Nacionalidade</h1>
 
-    <label for="itxtvel">Qual país você nasceu? </label>
-    <input type="text" name="txtvel" id="itxtvel">
+    <label for="icountry">Qual país você nasceu? </label>
+    <input type="text" name="country" id="icountry">
     
     <input type="button" value="Verificar" onclick="calcular()" class="button">
 
     <div id="res"></div>
 
     <script>
-        var country = document.querySelector('input#itxtvel')
+        var country = document.querySelector('input#icountry')
         var res = document.querySelector('div#res')
     
         function calcular() {
