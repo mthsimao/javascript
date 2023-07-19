@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+    <style>
+        body {
+            font: normal 16pt Arial;
+        }
+
+        input[type=text] {
+            font-size: 16px;
+            padding: 5px;
+        }
+        
+        .button {
+            font: normal 16px Arial;
+            padding: 5px 18px;
+        }
+
+        #res {
+            margin-top: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+
+    <label for="itxtvel">Qual país você nasceu? </label>
+    <input type="text" name="txtvel" id="itxtvel">
+    
+    <input type="button" value="Verificar" onclick="calcular()" class="button">
+
+    <div id="res"></div>
+
+    <script>
+        var country = document.querySelector('input#itxtvel')
+        var res = document.querySelector('div#res')
+    
+        function calcular() {
+
+            res.innerHTML = `Você nasceu em ${country.value}.`
+
+            if (country.value == 'Brasil' || country.value == 'brasil' || country.value == 'BRASIL' ) {
+                res.innerHTML += `<p>Você é Brasileiro!</p>`
+            } else {
+                res.innerHTML += `<p>Você é estrangeiro!</p>`
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
