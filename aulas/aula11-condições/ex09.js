@@ -8,3 +8,4 @@ if (country != "Brasil") {
     console.log('Você é Brasileiro!')
 }
 
+// Condição composta
