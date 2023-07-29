@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hora do Dia</title>
+    <title>Verificador de idade</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,18 +13,29 @@
 
     <main>
         <section>
-            <div id="form">
-                <label for="ianoNas">Ano de nascimento: </label>
-                <input type="number" name="anoNas" id="ianoNas">
+            <div>
+                <p>Ano de nascimento:
+                    <input type="number" name="txtano" id="itxtano">
+                </p>
 
-                <label for="isex">Sexo:</label>
-                <input type="radio" name="sex" id="">
+                <p>Sexo:
+                    <input type="radio" name="sex" id="imasc" checked>
+                    <label for="imasc">Masculino</label>
+                    <input type="radio" name="sex" id="ifem">
+                    <label for="ifem">Feminino</label>
+                </p>
+
+                <input type="button" value="Verificar" onclick="verificar()">
+            </div>
+
+            <div id="resultado">
+                Preencha os dados acima para ver o resultado.
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; CursoEmVideo</p>
+        <p>Feito por: Matheus Simão</p>
     </footer>
 
 
