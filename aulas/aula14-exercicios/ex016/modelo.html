@@ -3,24 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hora do Dia</title>
+    <title>Super contador</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Vamos contar</h1>
     </header>
 
     <main>
         <section>
             <div>
-                Testando...
+                <p>Início: <input type="number" name="inicio" id="iinicio"></p>
+                <p>Fim: <input type="number" name="fim" id="ifim"></p>
+                <p>Passo: <input type="number" name="passo" id="ipasso"></p>
+
+                <button onclick="contar()">Contar</button>
+            </div>
+
+            <div id="res">
+                Preparando a contagem...
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; CursoEmVideo</p>
+        <p>&copy; Matheus Simão</p>
     </footer>
 
 
