@@ -22,9 +22,33 @@ section {
     background-color: white;
     border-radius: 10px;
     padding: 15px;
-    width: 500px;
+    width: 600px;
     color: black;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.233);
+}
+
+div {
+    padding: 10px;
+}
+
+div p {
+    font: normal 16pt Arial;
+}
+
+input {
+    font-size: .8em;
+    padding: 4px;
+    width: 170px;
+}
+
+textarea {
+    margin-top: 10px;
+    padding: 4px;
+}
+
+button {
+    padding: 6px;
+    margin-left: 15px;
 }
 
 footer {
