@@ -41,9 +41,10 @@ input {
     width: 170px;
 }
 
-textarea {
+select {
     margin-top: 10px;
     padding: 4px;
+    font-size: .8em;
 }
 
 button {
