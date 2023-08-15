@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+            background-color: #3c3c3c;
+            color: #26f00b;
+            font-size: 1.4em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .inputs {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;            
+            align-items: center;
+            gap: 10px;
+        }
+
+        input[type=number] {
+            width: 150px;
+            font-size: 1em;
+        }
+
+        button {
+            padding: 3px 8px;
+            font-size: .8em;
+        }
+
+        select {
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Tabuada</h1>
+
+    <div class="inputs">
+        <p>Número: <input type="number" name="num" id="inum"></p>
+
+        <button onclick="tabuada()">Gerar</button>
+    </div>
+
+    <div id="res">
+        <select name="select" id="iselect" size="10">
+            <option value="opt1">Digite um número acima</option>
+        </select>
+    </div>
+
+    <script>
+        function tabuada() {
+            let num = document.querySelector('input#inum')
+            let res = document.querySelector('select#iselect')
+
+            if (num.value.length == 0 ) {
+                window.alert('Por favor digite um número.')
+            } else {
+                
+                let number = Number(num.value)
+                res.innerHTML = ''
+
+                for(var x = 1; x <= 10; x++) {
+                    let item = document.createElement('option')
+                    item.text = `${number} x ${x} = ${number*x} `
+                    item.value = `res${x}`
+                    res.appendChild(item)
+                }
+            }
+        }
+    </script>
+</body>
+</html>
