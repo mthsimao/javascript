@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    background-color: rgb(74, 142, 236);
+    font: normal 15pt Arial;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    padding-top: 2em;
+}
+
+section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 550px;
+    color: black;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.233);
+}
+
+div {
+    padding: 10px;
+}
+
+div p {
+    font: normal 14pt Arial;
+}
+
+input {
+    font-size: .8em;
+    padding: 4px;
+    width: 170px;
+}
+
+input[type=button] {
+    margin-left: 8px;
+    width: 100px;
+}
+
+select {
+    margin-top: 10px;
+    padding: 4px;
+    font-size: .8em;
+}
+
+button {
+    padding: 6px;
+    margin-left: 15px;
+}
+
+footer {
+    font-style: italic;
+}
+
+footer {
+    font-style: italic;
+}
