@@ -15,5 +15,5 @@ let multi = (n1, n2) => {
     return multip
 }
 
-let multip = multi(2,5)
+let multip = multi(2, 5)
 console.log(multip)
