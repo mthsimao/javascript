@@ -10,8 +10,10 @@ console.log(soma(2,5))
 
 */
 
-
-let soma = (v1 , v2) => {
-    let vezes = soma(2,5)
-    console.log(vezes)
+let multi = (n1, n2) => {
+    let multip = n1*n2
+    return multip
 }
+
+let multip = multi(2,5)
+console.log(multip)
