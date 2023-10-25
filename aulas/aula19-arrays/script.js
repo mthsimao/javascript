@@ -1,3 +1,5 @@
+// Criar array
+
 let produtos = ['Arroz', "Feijão", `Leite`]
 
 // Adicionar no final - push() 
