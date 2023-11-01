@@ -45,6 +45,8 @@ button {
 .azul {
     background-color: #1a237e;
     color: #fff;
+    padding: 8px;
+    width: 120px;
 }
 
 .amarelo {
