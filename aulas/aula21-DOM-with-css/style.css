@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    background-color: #ccc;
+    border-radius: 8px;
+    padding: 0.625rem;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid;
+}
+
+#btnlight {
+    background-color: #ededed;
+    color: #121212;
+}
+
+#btndark {
+    background-color: #263238;
+    color: white;
+}
+
+.box {
+    padding: 0.625rem;
+}
+
+#foto {
+    width: 256px;
+}
+
+.light {
+    background-color: #fff;
+    color: #191919;
+}
+
+.dark {
+    background-color: #222;
+    color: #fff;
+}
+
+.azul {
+    background-color: #1a237e;
+    color: #fff;
+}
+
+.amarelo {
+    background-color: #ffc107;
+    color: white;
+}
