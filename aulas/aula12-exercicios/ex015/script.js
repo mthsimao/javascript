@@ -18,6 +18,7 @@ function verificar() {
 
         if (sex[0].checked) {
             genero = 'Homem'
+
             if (idade >= 0 && idade <= 10 ) {
                 // criança
                 img.setAttribute('src', 'img/bebe-homem.png')
