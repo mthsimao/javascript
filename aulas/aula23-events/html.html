@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input id="cxtexto" type="text" placeholder="Digite seu nome" onfocus="focoNoCampo()" onkeypress="keyPressed()">
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script>
+        let letras = document.querySelector('input[type=text]')
+
+        function keyPressed() {
+            let numLetras = 1
+            console.log('Está teclado ' + (letras.value.length + numLetras) )
+        }
+
+        let btn = document.querySelector('input[type=submit]')
+
+        btn.addEventListener("click", function (event) {
+            event.preventDefault()
+            console.log("Enviou!")
+        })
+    </script>
+</body>
+</html>
