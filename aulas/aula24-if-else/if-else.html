@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="number" id="inumber">
+    <button onclick="calcular()">Enviar</button>
+
+    <div>
+        <h2 class="res1">Resultado: <span></span> </h2>
+
+        <h2 class="res2">- <span></span></h2>
+
+        <h2 class="res3">- <span></span></h2>
+    
+    </div>
+
+    <script>
+        let notaInput = document.querySelector('#inumber')
+        let res = document.querySelector('.res1>span')
+        let res2 = document.querySelector('.res2>span')
+        let res3 = document.querySelector('.res3>span')
+
+        // IF - else
+
+        const calcular = () => { notaInput.value >= 7 ? res.textContent =  'Aprovado' : res.textContent = 'Reprovado'}
+
+        
+        // IF TERNÁRIO
+
+        // if ternário condição ? verdadeiro : falso
+
+        // notaInput.value >= 7 ? res.textContent =  'Aprovado' : res.textContent = 'Reprovado'
+
+        
+        // IF ANINHADO OU ENCADEADO 
+        
+        /*
+
+        function calcular() {
+            if (notaInput.value >= 7) {
+            res2.textContent = 'Aprovado'
+        } else if ( notaInput.value <= 3 ) {
+            res2.textContent = 'Reprovado'
+        } else {
+            res2.textContent = 'Recuperação'
+        }
+        
+        */
+       
+
+        // Switch case 
+
+        let situacao = 'Aprovado'
+        // let situacao = 'Reprovado'
+        // let situacao = 'Recuperação'
+        
+        switch( situacao ) {
+            case 'Aprovado' :
+                res3.textContent = 'Férias!'
+                break
+            case 'Reprovado' :
+                res3.textContent = 'Sem férias!'
+                break
+            default :
+                res3.textContent = 'Estude!'
+        }
+
+
+    </script>
+</body>
+</html>
