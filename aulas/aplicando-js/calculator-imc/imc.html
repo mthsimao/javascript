@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main id="tela-principal">
+        <h1>Calculadora de IMC</h1>
+
+        <form action="" method="post" id="formulario">
+            <div class="form-group">
+                <label for="inome">Nome:</label>
+                <input type="text" name="name" id="inome" autofocus>
+            </div>
+
+            <div class="form-group">
+                <label for="iidade">Idade:</label>
+                <input type="number" name="idade" id="iidade" required min="0" max="130">
+            </div>
+
+            <div class="form-group">
+                <label for="ipeso">Peso:</label>
+                <input type="number" name="peso" id="ipeso" required min="0" max="500.0" step="0.1">
+            </div>
+
+            <div class="form-group">
+                <label for="ialtura">Altura:</label>
+                <input type="number" name="altura" id="ialtura" required min="0.0" max="2.70" step="0.01">
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="btn-submit" class="botao">Enviar</button>
+                <button type="reset" id="btn-reset" class="botao">Limpar</button>
+            </div>
+
+            <div class="form-group">
+                <label for="resultadoImc">IMC</label>
+                <input type="number" name="imc" id="resultadoImc" class="input" value="0.0" readonly>
+                <span id="aviso"></span>
+            </div>
+        </form>
+
+        <div id="resultado">
+            <h2 class="pessoa" id="id">IMC</h2>
+            <p class="pessoa" id="nome"></p>
+            <p class="pessoa" id="idade"></p>
+            <p class="pessoa" id="peso"></p>
+            <p class="pessoa" id="altura"></p>
+            <p class="pessoa" id="imc"></p>
+        </div>
+
+    </main>
+
+    <script src="imc.js"></script>
+    
+</body>
+</html>
