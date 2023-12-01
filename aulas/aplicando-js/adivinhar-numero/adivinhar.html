@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The mentalist</title>
+    <style>
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            font-size: 1.5rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input {
+            font-size: 1.4rem;
+            padding: 5px;
+            width: 100px;
+        }
+
+        .botao {
+            background-color: #8a8a8a;
+            border: none;
+            outline: none;
+            cursor: not-allowed;
+        }
+
+        .enable {
+            background-color: #222;
+            cursor: pointer;
+        }
+
+        #limpar {
+            background-color: #666;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: #222;
+            border-radius: 10px;
+            color: white;
+            padding: 10px 12px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .aviso {
+            padding: 12px;
+            color: black;
+            max-width: auto;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+
+        .errou {
+            background-color: #ff0000;
+        }
+
+        .acertou {
+            background-color: #2fff6d;
+        }
+
+        .quase {
+            background-color: #ffff00;
+        }
+
+    </style>
+</head>
+<body onload="gerarNumero()">
+    <main>
+        <section>
+            <h1>Tente adivinhar o número.</h1>
+            <p>Digite número entre 0 e 10.</p>
+
+            <input type="number" id="inputNumero" class="inputNumero" step="1" min="0" max="10" onclick="playMsc(); enableBtnChutar()">
+
+            
+            <button id="btnChutar" class="botao" onclick="jogar(); enableBtnChutar() " disabled>Chutar</button>
+            
+            <button type="reset" id="limpar" onclick="limpar()">Limpar</button>
+
+
+            <button id="btnMsc" class="botaoMusc" onclick="ativarDesativarMsc()">&#9835</button>
+      
+            <p class="aviso"></p>
+        </section>
+
+    </main>
+
+    <audio src="abertura-the-mentalist.mp3" id="musica"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
