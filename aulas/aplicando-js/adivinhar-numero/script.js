@@ -12,7 +12,7 @@ let aviso = document.querySelector('.aviso')
 // FUNCTIN GENERATING SECRET NUMBER
 function gerarNumero() {
     numerosecreto = Math.floor(Math.random() * (max - min + 1)) + min ;
-    console.log(numerosecreto)
+    //console.log(numerosecreto)
 }
 
 function blockAttempt() {
