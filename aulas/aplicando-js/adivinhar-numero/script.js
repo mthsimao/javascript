@@ -44,6 +44,7 @@ function validationNumber() {
         aviso.classList.remove('errou')
         aviso.classList.remove('quase')
         aviso.classList.add('acertou')
+        musica.pause()
         gerarNumero()
     } else {
         aviso.textContent = 'Não teve sorte, tente outra vez!'
