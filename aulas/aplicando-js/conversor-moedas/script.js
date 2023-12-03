@@ -20,7 +20,7 @@ let moedaConvertida = ''
 
 // MENSAGEM FORMATADA PARA EXIBIR VALORES MONETÁRIOS
 
-function mesagemFormata(moedaConvertida) {
+function mensagemFormatada(moedaConvertida) {
     isNaN(valorReal) ? valorReal = 0 : ''
     console.log('Moeda convertida ' + moedaConvertida)
     msg.textContent = `O valor ${(valorReal).toLocaleString('pt-BR', {style : 'currency', currency: 'BRL' })} convertido em ${moedaEstrangeira} é ${moedaConvertida}`
@@ -54,21 +54,40 @@ function ativarBotao() {
 btnConverter.addEventListener('click', () => {
     valorReal = parseFloat(valorDigitado.value)
 
-    for(let i = 0; i < moedaEstrangeira.length; i++) {
+    for(let i = 0; i < moedaSelecionada.length; i++) {
         if(moedaSelecionada[i].checked) {
             moedaEstrangeira = moedaSelecionada[i].value
             console.log(moedaEstrangeira)
         }
     }
+
+    switch(moedaEstrangeira) {
+
+        case 'Dólar' :
+            moedaConvertida = valorEmReal / valorDolar
+            simboloMonetario = 'US$'
+            mensagemFormatada(moedaConvertida.toLocaleString('en-US', {style: 'currency', currency: 'USD' }))
+            break
+    
+        case 'Euro' :
+            moedaConvertida = valorEmReal / valorEuro
+            mensagemFormatada(moedaConvertida.toLocaleString('de-DE', {style: 'currency', currency: 'EUR' }))
+            break
+    
+        case 'Libra Esterlina' :
+            moedaConvertida = valorEmeal / valorLibra
+            mensagemFormatada(moedaConvertida.toLocaleString('en-GB', {style: 'currency', currency: 'GBP' }))
+            break
+    
+        case 'Bitcoin' :
+            moedaConvertida = valorEmReal / valorBitcoin
+            mensagemFormatada(parseFloat(moedaConvertida).toFixed(5))
+            break
+
+        default:
+            msg.textContent = 'Escolha uma moeda estrangeira'
+                
+    }
+    isNaN(moedaConvertida) ? moedaConvertida = 0 : ''
 })
 
-switch(moedaEstrangeira) {
-    case 'Dólar' :
-        moedaConvertida = valorReal / valorDolar
-        simboloMonetario = 'US$'
-        mesagemFormata(moedaConvertida.toLocaleString('en-US', {style: 'currency', currency: 'USD' }))
-
-    case 'Euro' :
-        moedaConvertida = valorReal / valorEuro
-        mesagemFormata(moedaConvertida.toLocaleString('de-DE', {style: 'currency', currency: 'EUR' }))
-}
