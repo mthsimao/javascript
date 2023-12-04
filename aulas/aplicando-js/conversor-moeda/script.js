@@ -33,7 +33,7 @@ btnlimpar.addEventListener('click', () => {
 const mensagemFormatada = () => {
     isNaN(valorEmReal) ? valorEmReal = '' : 0
 
-    resMsg.textContent = "O valor " + (valorEmReal).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) + " convertido em " + moedaEstrangeira + " é " + moedaConvertida
+    resMsg.innerHTML =`O valor ${valorEmReal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} convertido em ${moedaEstrangeira} é ${moedaConvertida} `
 }
 
 const converter = () => {
@@ -77,12 +77,12 @@ const converter = () => {
                 
                 moedaConvertida = (valorEmReal / valorDolar).toFixed(2)
 
-                mensagemFormatada(moedaConvertida.toLocaleString('en-US', { style: 'currency', currency: 'USD' }))
+                mensagemFormatada(moedaConvertida.toLocaleString('en-US', { style: 'currency', currency: 'USD'}))
                 break
 
             case 'Euro' :
                 moedaConvertida = (valorEmReal / valorEuro).toFixed(2)
-                mensagemFormatada(moedaConvertida.toLocaleString('de-DE', {style:'currency', currency : 'EUR'}))
+                mensagemFormatada(moedaConvertida.toLocaleString("de-DE", { style: "currency", currency: "EUR" }))
                 break
 
             case 'Libra' :
