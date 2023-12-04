@@ -12,12 +12,38 @@
             font-size: 1.4rem;
         }
 
-        .botao {
-            border: none;
-            outline: none;
-            padding: 5px;
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.2rem;
+        }
+
+        #inputReal {
+            padding: 4px;
             font-size: 1.2rem;
         }
+
+        .botao {
+            border: none;
+            border-radius: 4px;
+            outline: none;
+            padding: 8px 12px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-left: 12px;
+        }
+
+        .botao:nth-child(1) {
+            background-color: rgb(43, 153, 243);
+        }
+
+        .aviso {
+            padding: 1rem;
+            background-color: #424242;
+            border-radius: 10px;
+        }
+
     </style>
 </head>
 <body>
@@ -27,7 +53,7 @@
         <div class="group">
 
             <label for="inputReal">R$ </label>
-            <input type="text" name="inputReais" id="inputReal" min="0.001" max="9999999.9" step="0.01" onchange="ativarBotao()">
+            <input type="number" name="inputReais" id="inputReal" min="0.001" max="9999999.9" step="0.01" onchange="ativarBotao()" required>
         </div>
 
         <div class="group">
@@ -50,5 +76,7 @@
             <p class="aviso">Digite o valor a ser convertido e selecione a moeda</p>
         </div>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
