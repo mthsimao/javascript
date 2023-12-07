@@ -77,7 +77,7 @@ const converter = () => {
                 
                 moedaConvertida = (valorEmReal / valorDolar).toFixed(2)
 
-                mensagemFormatada(moedaConvertida.toLocaleString('en-US', { style: 'currency', currency: 'USD'}))
+                mensagemFormatada(moedaConvertida.toLocaleString("en-US", {style : 'currency', currency: "USD"}))
                 break
 
             case 'Euro' :
