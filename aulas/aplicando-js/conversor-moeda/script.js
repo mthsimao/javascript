@@ -75,19 +75,18 @@ const converter = () => {
 
             case 'Dólar': 
                 
-                moedaConvertida = (valorEmReal / valorDolar).toFixed(2)
-
-                mensagemFormatada(moedaConvertida.toLocaleString("en-US", {style : 'currency', currency: "USD"}))
+                moedaConvertida = (valorEmReal / valorDolar).toLocaleString("en-US", {style : 'currency', currency: "USD"})
+                mensagemFormatada(moedaConvertida)
                 break
 
             case 'Euro' :
-                moedaConvertida = (valorEmReal / valorEuro).toFixed(2)
-                mensagemFormatada(moedaConvertida.toLocaleString("de-DE", { style: "currency", currency: "EUR" }))
+                moedaConvertida = (valorEmReal / valorEuro).toLocaleString("de-DE", { style: "currency", currency: "EUR" })
+                mensagemFormatada(moedaConvertida)
                 break
 
             case 'Libra' :
-                moedaConvertida = (valorEmReal / valorLibra).toFixed(2)
-                mensagemFormatada(moedaConvertida.toLocaleString('en-GB', {style:'currency', currency : 'GBP'}))
+                moedaConvertida = (valorEmReal / valorLibra).toLocaleString('en-GB', {style:'currency', currency : 'GBP'})
+                mensagemFormatada(moedaConvertida)
                 break
 
             default :
