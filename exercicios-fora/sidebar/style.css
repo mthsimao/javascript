@@ -1,2 +1,138 @@
 @charset "UTF-8";
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 270px;
+    padding: 22px; 
+    transition: all .3s ease-in-out;
+    max-width: 90%;
+}
+
+.close.container {
+    position: relative;
+    left: 108px;
+}
+
+.sidebar {
+    box-shadow: 2px 0px 3px 3px rgba(0, 0, 0, 0.036);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 256px;
+    z-index: 100;
+    padding: 16px 10px;
+    transition: all .3s ease-in-out;
+}
+
+.close.sidebar {
+    width: 102px;
+}
+
+.close.sidebar span {
+    display: none;
+}
+
+.close.toggle {
+    position: relative;
+    left: 40%;
+}
+
+.toggle {
+    position: absolute;
+    top: 3.5%;
+    left: 93%
+}
+
+.toggle .bi-arrow-left-circle-fill {
+    font-size: 2rem;
+    color: orangered;
+    cursor: pointer;
+}
+
+.box-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+}
+
+.box-logo span {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.box-logo .span2 {
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+img {
+    max-width: 68px;
+}
+
+.items {
+    font-size: 1.275rem;
+    padding: 10px;
+    margin-top: 2rem;
+}
+
+.items ul {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    gap: 2.8rem;
+}
+
+.items ul li {
+    list-style-type: none;
+    border-radius: 10px;
+}
+
+.items ul li a, .logout {
+    background-color: #fafafa;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    padding: 14px;
+    text-align: center;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.items ul li a:hover, .logout:hover {
+    background-color: rgb(247, 191, 165);
+}
+
+.items ul li a i {
+    padding-right: 10px;
+}
+
+.close .items ul li a i {
+    padding: 0;
+}
+
+.items2 {
+    position: absolute;
+    top: 85%;
+    left: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-end;
+}
+
+.logout a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+}
