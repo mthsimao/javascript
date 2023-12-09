@@ -1,9 +1,5 @@
-let btnSidebar = document.querySelector('.toggle')
+let btnDarkmode = document.querySelector('#darkmode')
 
-let sidebar = document.querySelector('.sidebar')
-let container = document.querySelector('.container')
-
-btnSidebar.addEventListener('click', () => {
-    sidebar.classList.toggle('close')
-    container.classList.toggle('close')
+btnDarkmode.addEventListener('click', () => {
+    body.classList.toggle('dark')
 })
