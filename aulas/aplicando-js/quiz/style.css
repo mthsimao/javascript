@@ -70,7 +70,7 @@ body {
     flex-direction: column;
     align-items: left;
     justify-content: center;
-    gap: 1.4rem;
+    gap: 1rem;
     font-size: 1.2rem;
     margin-top: 1.4rem;
 
@@ -79,9 +79,13 @@ body {
 .corpo ol li {
     border-radius: 10px;
     list-style-type: none;
-    padding: 10px;
+    padding: 16px 10px;
     width: 100%;
     cursor: pointer;
+}
+
+.corpo ol li:hover {
+    background-color: rgb(20, 20, 20)
 }
 
 .corpo ol li:active {
