@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.conteudo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.titulo {
+    text-align: center;
+}
+
+.titulo h1 {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+.titulo p {
+    background-color: rgb(116, 116, 116);
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.questoes {
+    border: 1px solid rgb(80, 80, 80);
+    border-radius: 10px;
+    color: white;
+    padding: 20px;
+}
+
+.questao {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    #numQuestao {
+        background-color: rgb(47, 143, 253);
+        border-radius: 50%;
+        padding: 10px 14px;
+        font-size: 1.4rem;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+.corpo ol{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    gap: 1.4rem;
+    font-size: 1.2rem;
+    margin-top: 1.4rem;
+
+}
+
+.corpo ol li {
+    border-radius: 10px;
+    list-style-type: none;
+    padding: 10px;
+    width: 100%;
+}
+
+.corpo ol li:hover {
+    background-color: blue;
+    cursor: pointer;
+}
+
+#aviso {
+    font-size: 1.1rem;
+}
+
+.bloqueado {
+    display: none;
+}
+
+.bloqueado li:hover {
+    display: none;
+}

@@ -38,6 +38,6 @@ const lastNames = people.map(( person, index, array) => {
 
 console.log(lastNames)
 
-/* 
+/*    
     Quase a mesma coisa que o forEach(), porém, usando o map() você tem um retorno de um valor
 */
