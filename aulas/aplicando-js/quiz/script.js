@@ -79,8 +79,17 @@ const q5 = {
     correta: 'Norte'
 }
 
+const q6 = {
+    numQuestao: 6,
+    pergunta: 'Em qual país tem o fenômeno mais conhecido como Aorora Boreal? ',
+    alternativaA: 'Finlândia',
+    alternativaB: 'Rússia',
+    alternativaC: 'Grécia',
+    correta: 'Finlândia'
+}
 
-const questoes = [q0, q1, q2, q3, q4, q5]
+
+const questoes = [q0, q1, q2, q3, q4, q5, q6]
 
 let numero = document.querySelector('#numero')
 let total = document.querySelector('#total')

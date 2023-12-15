@@ -51,6 +51,10 @@ body {
     align-items: center;
     gap: 1rem;
 
+    #pergunta {
+        max-width: 412px;
+    }
+
     #numQuestao {
         background-color: orangered;
         border-radius: 50%;
@@ -80,7 +84,7 @@ body {
 }
 
 .corpo ol li:hover {
-    background-color: rgba(248, 105, 39, 0.562);
+    background-color: rgb(207, 109, 64);
     cursor: pointer;
 }
 
