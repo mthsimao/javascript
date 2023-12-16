@@ -9,18 +9,12 @@ let pontos = 0
 let aviso = document.querySelector('#aviso')
 let instrucoes = document.querySelector('.instrucoes')
 
-// ARTICLE DAS QUESTOES
-let articleQuestoes = document.querySelector('.questoes')
-
-// ALTERNATIVAS 
-let alternativas = document.querySelector('#alternativas')
-
+//ALTERNATIVAS
 let a = document.querySelector('#a')
 let b = document.querySelector('#b')
 let c = document.querySelector('#c')
 
 // BOTAO REINICIAR
-
 let btnReiniciar = document.querySelector('.btn>button')
 
 btnReiniciar.style.display = 'none'
@@ -109,11 +103,11 @@ b.textContent = q1.alternativaB
 c.textContent = q1.alternativaC
 
 // CONFIGURAR O VALUE INICIAL DA 1A QUESTAO
-
 a.setAttribute('value', '1A')
 b.setAttribute('value', '1B')
 c.setAttribute('value', '1C')
 
+// PROXIMA QUESTÃO
 function proximaQuestao(nQuestao) {
     numero.textContent = nQuestao
 
@@ -141,6 +135,8 @@ function desbloquearAlternativas() {
     c.classList.remove('bloqueado')
 }
 
+// FUNCTION PARA VERIFICAR SE O USUÁRIO ACERTOU A PERGUNTA
+
 function verificarSeAcertou(nQuestao, resposta) {
     let numeroDaQuestao = nQuestao.value
     //console.log('Numero da questão: ' + numeroDaQuestao)
@@ -152,19 +148,21 @@ function verificarSeAcertou(nQuestao, resposta) {
     //console.log('Resposta correta: ' + respostaCorreta)
 
     //VERIFICAÇÃO DE QUE SE A REPOSTA ESCOLHIDA PELO USUÁRIO, ESTÁ CORRETA OU NÃO
-    if(repostaEscolhida == respostaCorreta) {
-        pontos += 10
-    } else {
+    
+    if(repostaEscolhida != respostaCorreta) {
         console.log('Errou!')
+    } else {
+        pontos += 10
     }
 
     bloquearAlternativas()
 
-    setTimeout(function() {
+    setTimeout(() => {
 
         //Atualizar os pontos
         placar = pontos
         instrucoes.textContent = "Pontos: " + placar
+
 
         proxima = numeroDaQuestao+1
     
@@ -202,6 +200,4 @@ function fimDeJogo() {
     btnReiniciar.style.display = 'block'
 } 
 
-const reiniciarQuiz = () => {
-    location.reload()
-}
+const reiniciarQuiz = () => { location.reload() }
