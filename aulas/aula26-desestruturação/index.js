@@ -121,5 +121,10 @@ liquidificador2(["banana", "pera", 'uva', "maçã"])
 
 
 
+// Using resting operator inside of function with object
 
+function liquidificador3( {name, ...rest}) {
+    console.log(rest)
+}
 
+liquidificador3( {name: 'Matheus', lastName: 'Simão', age: 25})
