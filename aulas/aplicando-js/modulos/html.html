@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main">
+        <div class="card-add-person">
+            
+            <div class="box-name">
+                <label for="iname">Nome:</label>
+                <input type="text" name="name" id="iname" maxlength="20" minlength="1" required autofocus>
+            </div>
+
+            <div class="box-cell">
+                <label for="icell">Telefone:</label>
+                <input type="tel" name="name" id="icell" maxlength="20" minlength="1" required>
+            </div>
+
+            <div class="box-email">
+                <label for="iemail">Email:</label>
+                <input type="email" name="name" id="iemail" minlength="1" required>
+            </div>
+
+            <div class="btn-guardar">
+                <button class="btn">Guardar</button>
+            </div>
+
+        </div><!-- card -->
+
+        <div class="contacts">
+            <h2>Aqui irão aparecer seus contatos:</h2>
+            <div class="list-contacts"></div>
+        </div>
+
+    </div>
+    
+    <script src="main.js" type="module"></script>
+</body>
+</html>

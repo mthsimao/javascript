@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding: 20px;
+}
+
+.card-add-person {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 26px;
+}
+
+.box-name, .box-cell, .box-email {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    font-size: 1rem;
+    padding: 4px 8px;
+    color: rgb(61, 61, 61);
+}
+
+.btn {
+    background-color: rgb(103, 35, 122);
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    outline: none;
+    padding: 10px 18px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.list-contacts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    gap: 1.2rem;
+}
+
+.contato {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+    max-width: 314px;
+}
+
+.contato p {
+    width: 100%;
+}
