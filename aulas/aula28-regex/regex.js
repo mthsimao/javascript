@@ -9,3 +9,5 @@ console.log(nome.match(/o/g));
 console.log(nome.replace(/pinho/i, 'Teste'));
 
 console.log(nome.replace(/o/ig, 'Teste'));
+
+console.log(nome.match(/[oh]/ig));
