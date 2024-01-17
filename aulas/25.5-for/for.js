@@ -32,13 +32,15 @@ console.log('====================================');
 
 console.log('For em array')
 
-let array = [1,2,3,4,5]
+let array = [11,21,31,41,51]
 
 // x=0, verifica se o x é menor ou igual o comprimento do array
 // se for menor, x++ => executa o comando
 
 for(let x = 0; x<=array.length; x++) {
-    console.log('Valor de x = ' + x)
+    console.log('====================================');
+    console.log(`Posição ${x}`) // posição do array
+    console.log(`Valor ${array[x]}`) // valor de cada posição do array
 }
 
 //output > 1,2,3,4,5
