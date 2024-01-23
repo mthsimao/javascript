@@ -1,6 +1,5 @@
 // DESESTRUTURAÇÃO DO JAVASCRIPT
 
-
 /*
 
     Tirar um valor primitivo ou uma estrutura de dados
@@ -10,11 +9,16 @@
     * Object
         - Renomenado proriedades
         - Colocando em variáves existentes
-
-
+    
+    * Array
+        - 2 valores
+        - Desconsiderando itens
+        - ...rest
+    
+    * Function
 */
 
-//    Renomando propriedades
+//  Renomando propriedades
 
     const person = {
         name: 'Elton',
@@ -41,7 +45,7 @@
         nascimento: 1998
     };
 
-    ({nascimento: AnoDeNascimento} = pessoa)
+    ( {nascimento: AnoDeNascimento} = pessoa)
 
     console.log(AnoDeNascimento)
 
