@@ -32,13 +32,16 @@ body.dark #darkmode {
     display: none;
 }
 
-#lightmode {
-    display: flex;
-    align-items: center;
+body.dark #theme2 {
+    display: block;
 }
 
 body.dark #lightmode {
     display: inline-block;
+}
+
+#theme2 {
+    display: none;
 }
 
 .sidebar {
@@ -95,6 +98,10 @@ a:hover {
 
 a span {
    font-size: 1.2rem;
+}
+
+ul {
+    width: 280px;
 }
 
 ul li {
