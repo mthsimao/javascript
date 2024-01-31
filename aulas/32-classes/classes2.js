@@ -1,62 +1,47 @@
-class Pessoa {
+class Pessoa{
     constructor(pName, pAge) {
-        this.name = pName
-        this.age = pAge
+        this.nome = pName,
+        this.idade = pAge
     }
 
-    getName() {
-        return this.name
+    getNome() {
+        return this.nome
     }
-    getAge() {
-        return this.age
-    }
-
-    setName(sName) {
-        this.name = sName
-    }
-    setAge(sAge) {
-        this.age = sAge
+    getIdade() {
+        return this.idade
     }
 
-    info() {
-        console.log(`Name: ${this.name}`);
-        console.log(`Age: ${this.age}`);
-        console.log(`--------------------`);
-    }
 }
-
-let pessoas = []
 
 let btn = document.querySelector('button')
 let res = document.querySelector('.res')
 
-// função para adicionar a pessoa na tela
+let pessoas = []
 
-const addPessoa = () => { 
+const addPessoa = () => {
     res.innerHTML = ''
-    pessoas.map((p) => {
-        const div = document.createElement('div')
-        div.setAttribute("class", "pessoa")
-        div.innerHTML = `<p>Nome: ${p.getName()}</p> <p>Idade: ${p.getAge()}</p> `
 
+    pessoas.map( (p) => {
+        const div = document.createElement('div')
+        div.setAttribute('class', 'pessoa')
+        div.innerHTML = `<p>Nome: ${p.getNome()}</p> <p>Idade: ${p.getIdade()}</p>`
         res.appendChild(div)
     })
 }
 
 btn.addEventListener('click', (evt) => {
 
-    let inputName = document.querySelector('#iname')
-    let inputAge = document.querySelector('#iage')
+    let name = document.querySelector('#iname')
+    let age = document.querySelector('#iage')
 
-    let p = new Pessoa(inputName.value, inputAge.value) // criando nova classe de pessoa
+    const p = new Pessoa(name.value, age.value)
 
-    pessoas.push(p) // adicionar a pessoa ao array de pessoas
+    name.value = ''
+    age.value = ''
 
-    inputName.value = "" // após clicar em adicionar, deixar o input vazio para digitar novamente
-    inputAge.value = "" // após clicar em adicionar, deixar o input vazio para digitar novamente
-    
-    inputName.focus()
+    pessoas.push(p)
 
     addPessoa()
-
+    name.focus()
+    
 })

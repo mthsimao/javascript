@@ -32,6 +32,7 @@ button {
     border-radius: 10px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 1.4rem;
 }
 
