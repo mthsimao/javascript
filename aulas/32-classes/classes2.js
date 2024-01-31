@@ -18,6 +18,8 @@ let res = document.querySelector('.res')
 
 let pessoas = []
 
+// function para add a pessoa na tela
+
 const addPessoa = () => {
     res.innerHTML = ''
 
@@ -34,14 +36,14 @@ btn.addEventListener('click', (evt) => {
     let name = document.querySelector('#iname')
     let age = document.querySelector('#iage')
 
-    const p = new Pessoa(name.value, age.value)
+    const p = new Pessoa(name.value, age.value) // passando o nome e idade para a class Pessoa
 
     name.value = ''
     age.value = ''
 
-    pessoas.push(p)
+    pessoas.push(p) // adicionar a pessoa no array das pessoas
 
-    addPessoa()
-    name.focus()
+    addPessoa() // chamar a function para add a pessoa
+    name.focus() // focus após adicionar a pessoa
     
 })
