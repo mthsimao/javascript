@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input {
+    font-size: 1rem;
+    padding: 4px;
+}
+
+button {
+    font-size: 1rem;
+    padding: 4px 8px;
+    cursor: pointer;    
+}
+
+.carros {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.carro {
+    background-color: #8cf;
+    border: 2px solid blue;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 5px;     
+}

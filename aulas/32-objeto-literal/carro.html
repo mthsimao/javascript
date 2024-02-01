@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="carro.css">
+</head>
+<body>
+    <h1>Crie seu carro</h1>
+
+    <div class="group">
+        <label for="inome">Nome</label>
+        <input type="text" name="nome" id="inome" autofocus value="">
+    </div>
+
+    <div class="group">
+        <label for="iportas">Portas</label>
+        <input type="number" name="portas" id="iportas" min="1" max="10" value="1">
+    </div>
+
+    <div class="group">
+        <label for="iblindagem">Blindagem</label>
+        <input type="number" id="iblindagem" min="0" max="100" value="0" disabled>
+    </div>
+
+    <div class="group">
+        <label for="imunicao">Munição</label>
+        <input type="number" id="imunicao" min="0" max="1000" value="0" disabled>
+    </div>
+
+    <div class="group">
+        <label>Tipo</label>
+
+        <div class="radio">
+            <input type="radio" name="tipo" id="inormal" value="n" checked>
+            <label for="inormal">Normal</label>
+        </div>
+
+        <div class="radio">
+            <input type="radio" name="tipo" id="imilitar" value="m">
+            <label for="imilitar">Militar</label>
+        </div>
+    </div>
+
+    <div class="btn">
+        <button>Adicionar</button>
+    </div>
+
+    <div class="carros">
+        <!-- <div class="carro"></div> -->
+    </div>
+
+    <script src="carros.js"></script>
+</body>
+</html>
