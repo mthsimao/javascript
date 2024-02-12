@@ -13,6 +13,12 @@ let btn = document.querySelector('button')
 
 let carros = []
 
+const removerCarro = (rcarro) => {
+    carros = carros.filter( (el) => {
+        return el._nome != rcarro
+    })
+}
+
 radioNormal.addEventListener('click', (evt) => {
     blindagemInput.setAttribute('disabled', 'disabled')
     municaoInput.setAttribute('disabled', 'disabled')
@@ -30,14 +36,29 @@ const gerenciarExibicaoDeCarros = () => {
 
     carros.map( (c) => {
         const div = document.createElement('div')
+        const btn = document.createElement('button')
+       
+        btn.addEventListener("click", (evt)=>{
+            const remove = evt.target.parentNode.dataset.nome
+            removerCarro(remove)
+
+            gerenciarExibicaoDeCarros()
+        })
+
         div.setAttribute('class', 'carro')
+        div.setAttribute('data-nome', c._nome)
         div.innerHTML = `<p>Nome: ${c._nome}</p> <p>Portas: ${c._portas}</p> <p>Blindagem: ${c._blindagem}</p> <p>Munição: ${c._municao}</p>`
+        btn.innerHTML = 'Remover'
+        btn.setAttribute('class', 'remove')
         res.appendChild(div)
+        div.appendChild(btn)
     })
 }
 
 btn.addEventListener('click', () => {
-    if(radioNormal.checked) {
+    if (nomeInput.value == '' || nomeInput.value == null ) {
+        alert('Crie direito esse carro seu fela da puta')
+    } else if(radioNormal.checked) {
         const c = new Carro(nomeInput.value, portasInput.value)
         carros.push(c)
     } else if(radioMilitar.checked) {
@@ -46,9 +67,11 @@ btn.addEventListener('click', () => {
     } else {
         alert('Crie direito esse carro seu fela da puta')
     }
+
+    nomeInput.value = ''
+    portasInput.value = 1
     gerenciarExibicaoDeCarros()
 })
-
 
 
 // herança
@@ -76,19 +99,6 @@ class Carro { // classe Pai
         return this._cor
     }
 }
-
-const c1 = new Carro('Normal', 4) 
-
-c1.ligar()
-c1.cor =  'Preto'
-
-console.log(`Nome: ${c1._nome}` );
-console.log(`Portas: ${c1._portas}`);
-console.log(`Ligado: ${ (c1._turnOn?'sim':'não') }`);
-console.log(`Velocidade: ${c1._vel}`);
-console.log(`Cor: ${c1._cor}`);
-console.log('-------------------------');
-
  
 class Militar extends Carro { // classe filho
     constructor(nome, portas, blindagem, municao) {
@@ -105,19 +115,3 @@ class Militar extends Carro { // classe filho
         }
     }
 }
-
-const c2 = new Militar ('Tanque', 1, 100, 60)
-
-c2.atirar()
-c2.atirar()
-c2.atirar()
-
-console.log(`Nome: ${c2._nome}` );
-console.log(`Portas: ${c2._portas}`);
-console.log(`Ligado: ${ (c2._turnOn?'sim':'não') }`);
-console.log(`Velocidade: ${c2._vel}`);
-console.log(`Blindagem: ${c2._blindagem}`);
-console.log(`Munição: ${c2._municao}`);
-console.log(`Cor: ${c2._cor}`);
-console.log('-------------------------');
-
