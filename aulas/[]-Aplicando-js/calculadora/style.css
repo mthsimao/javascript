@@ -6,6 +6,11 @@
     font-size: large;
 }
 
+body {
+    background-color: rgb(54, 54, 54);
+    color: white;
+}
+
 main {
     height: 90vh;
     display: flex;
