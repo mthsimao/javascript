@@ -68,11 +68,6 @@ main {
     justify-content: center;
 }
 
-#t0 {
-    padding-right: 100px;
-    padding-left: 35px;
-    border-radius: 70px;
-}
 
 .lightblue {
     background-color: rgb(117, 151, 163);

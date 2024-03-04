@@ -8,6 +8,10 @@ const clear = document.querySelector('#CL')
 
 const resultadoCalc = document.querySelector('.res')
 
+const tcpy = document.querySelector('#tcpy')
+
+// const text = document.querySelector('#teste')
+
 let sinal = false
 let decimal = false
 
@@ -61,4 +65,14 @@ resultadoCalc.addEventListener('click', (evt) => {
     const res = eval(resultadoP.innerHTML )
 
     resultadoP.innerHTML = res
+})
+
+// botao para copiar 
+
+tcpy.addEventListener('click', (evt) => {
+    navigator.clipboard.writeText(resultadoP.innerHTML)
+   
+    // text.select() // mobile
+    // text.setSelectionRange(0,999999) // mobile
+    // navigator.clipboard.writeText(text.value)
 })
