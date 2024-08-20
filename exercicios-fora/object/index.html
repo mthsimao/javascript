@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="nome" id="inome" placeholder="nome">
+
+    <input type="number" name="idade" id="idade" placeholder="idade">
+
+    <input type="text" name="nomePai" id="inomePai" placeholder="nome do pai">
+    
+    <input type="text" name="nomeMae" id="inomeMae" placeholder="nome da mae">
+
+    <button class="btn">Testar</button>
+
+    <script>
+        let nome = document.querySelector('#inome')
+        let idade = document.querySelector('#idade')
+        let nomePai = document.querySelector('#inomePai')
+        let nomeMae = document.querySelector('#inomeMae')
+
+       
+
+        let btn = document.querySelector('.btn')
+
+        btn.addEventListener('click', () => {
+            let pessoa = {
+                name: nome.value,
+                age: idade.value,
+                nameFather: nomePai.value,
+                nameMother: nomeMae.value
+            }
+            console.log(pessoa)
+        })
+    </script>
+</body>
+</html>
