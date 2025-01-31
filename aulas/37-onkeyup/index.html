@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+        }
+        .container {
+            box-sizing: border-box;
+            display: block;
+            align-content: center;
+            padding: 10px;
+        }
+
+        input {
+            padding: 8px 10px;
+            font-size: 1rem;
+        }
+
+        input:user-valid {
+            border: 3x solid green;
+        }
+
+        input:user-invalid {
+            border: 3px solid red;
+        }
+
+        button {
+            font-size: 1rem;
+            padding: 8px 12px;
+        }
+
+        .res {
+            border: 1px solid black;
+            min-height: 80px;
+            width: 600px;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <h1>onkeyup</h1>
+        <p>when the user releases the key, the function will be activated </p>
+
+        <input type="text" name="text" id="itexto" placeholder="name" onkeyup="verificar()">
+
+        <!-- <button>submit</button> -->
+
+    </div>
+
+    <div class="res"></div>
+
+    <script>
+        let input = document.querySelector('#itexto')
+        let res = document.querySelector('.res')
+        let btn = document.querySelector('button')
+
+        const verificar = () => {
+            if (input.value.length <= 3 ) {
+                res.innerHTML = ` Enter a name`
+                input.style.border = '1px solid red'
+                input.style.outline = '1px solid red'
+            } else if ( input.value.length == '' ) {
+                res.innerHTML = `Enter a name`
+                input.style.border = '1px solid red'
+                input.style.outline = '1px solid red'
+            } else {
+                res.innerHTML = `Hi <strong>${input.value}</strong> , welcome to script ! `
+                input.style.border = '1px solid green'
+                input.style.outline = '1px solid green'
+
+            }
+        }
+
+        // btn.addEventListener('click', () => {
+        //     verificar();
+        // })
+
+ 
+    </script>
+</body>
+</html>
