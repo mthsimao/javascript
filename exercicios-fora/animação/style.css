@@ -1,84 +1,79 @@
 @charset "UTF-8";
 
 body {
-    background-color: #333;
-    color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    height: 100vh;
+  background-color: #333;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  height: 100vh;
 }
 
 .element {
-    background-color: #3f3e3e;
-    border: 1px solid red;
-    border-radius: 8px;
-    width: 400px;
-    text-align: center;
-    font-size: 1rem;
-    padding: 2rem;
-    position: absolute;
-    top: -400px;
+  background-color: #3f3e3e;
+  border: 1px solid red;
+  border-radius: 8px;
+  width: 400px;
+  text-align: center;
+  font-size: 1rem;
+  padding: 2rem;
+  position: absolute;
+  top: -400px;
 }
 
 .container {
-    background-color: #414141;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.363);
-    border-radius: 20px;
-    padding: 2rem;
-    width: 400px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    font-size: 1.2em;
+  background-color: #414141;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.363);
+  border-radius: 20px;
+  padding: 2rem;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  font-size: 1.2em;
 }
 
 .btn {
-    background-color: #11a0ff;
-    border: none;
-    border-radius: 12px;
-    outline: none;
-    padding: .8rem 1rem;
-    font-size: 1.1rem;
+  background-color: #11a0ff;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  padding: 0.8rem 1rem;
+  font-size: 1.1rem;
 
-    cursor: pointer;
-    transition: all .2s;
+  cursor: pointer;
+  transition: all 0.2s;
 }
 
 .btn:hover {
-    background-color: #0d7bc4;
+  background-color: #0d7bc4;
 }
 
 .descer {
-    animation: descer 4s linear;
+  animation: descer 4s normal;
 }
 
 @keyframes descer {
-    0% {
-        top: 240px;
-    } 10% {
-        top: 250px;
-    } 20% {
-        top: 240px;
-    } 30% {
-        top: 250px;
-    } 40% {
-        top: 240px;
-    } 50% {
-        top: 250px;
-    } 60% {
-        top: 240px;
-    } 70% {
-        top: 250px;
-    } 80% {
-        top: 240px;
-    } 90% {
-        top: 250px;
-    } 100% {
-        
-    }
+  0% {
+    top: 250px;
+  }
+  20% {
+    top: 240px;
+  }
+  40% {
+    top: 250px;
+  }
+  60% {
+    top: 240px;
+  }
+  80% {
+    top: 250px;
+  }
+  100% {
+    top: 240px;
+  }
 }

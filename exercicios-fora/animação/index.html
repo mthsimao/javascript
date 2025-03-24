@@ -1,37 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="element">
-        <p>The test is aproved!</p>
+      <p>The test is aproved!</p>
     </div>
 
     <div class="container">
-        <p>JUST A QUICK TEST</p>
-        <input type="button" value="CLICK HERE" class="btn">
+      <p>JUST A QUICK TEST</p>
+      <input type="button" value="CLICK HERE" class="btn" />
     </div>
 
     <script>
-        let btn = document.querySelector('.btn')
-        let element = document.querySelector('.element')
-        let mexer = false;
+      let btn = document.querySelector(".btn");
+      let element = document.querySelector(".element");
+      let mexer = false;
 
-        btn.addEventListener('click', () => {
-            mexer = !mexer;
+      btn.addEventListener("click", () => {
+        mexer = !mexer;
 
-            if(mexer) {
-                element.classList.add('descer')
-            } else {
-                element.classList.remove('descer')
-            }
-        })
-        
+        if (mexer) {
+          element.classList.add("descer");
+        } else {
+          element.classList.remove("descer");
+        }
+      });
     </script>
-</body>
+  </body>
 </html>
